@@ -30,54 +30,54 @@ app.post("/webhook", function (request, response) {
   
 
 
-  //     response.json({
-  //       "fulfillmentMessages": [
-  //               {
-  //                 "card": {
-  //                   "title": "Processo Seletivo",
-  //                   "subtitle": "Bem vindo ao nosso Processo seletivo",
-  //                   "imageUri": "https://cdn.glitch.global/40696ccc-9795-4f13-933d-12fb6ceec97b/processo-seletivo.jpg?v=1658277254993"
-  //                 }
-  //               },
-  //               {
-  //                 "text" :{
-  //                    "text": [
-  //                       "Os campi da UFABC estão sediados nos municípios de Santo André e São Bernardo do Campo"
-  //                   ]
-  //                 }
-  //               },
-  //               {
-  //                 "image":{
+//       response.json({
+//         "fulfillmentMessages": [
+//                 {
+//                   "card": {
+//                     "title": "Processo Seletivo",
+//                     "subtitle": "Bem vindo ao nosso Processo seletivo",
+//                     "imageUri": "https://cdn.glitch.global/40696ccc-9795-4f13-933d-12fb6ceec97b/processo-seletivo.jpg?v=1658277254993"
+//                   }
+//                 },
+//                 {
+//                   "text" :{
+//                      "text": [
+//                         "Os campi da UFABC estão sediados nos municípios de Santo André e São Bernardo do Campo"
+//                     ]
+//                   }
+//                 },
+//                 {
+//                   "image":{
 
-  //                     "imageUri": "https://www.ufabc.edu.br/images/imagens_a_ufabc/campus-sa.jpg",
-  //                     "accessibilityText": "Campus em Santo André"
+//                       "imageUri": "https://www.ufabc.edu.br/images/imagens_a_ufabc/campus-sa.jpg",
+//                       "accessibilityText": "Campus em Santo André"
 
-  //                 }
-  //               },
-  //               {
-  //                 "image":{
+//                   }
+//                 },
+//                 {
+//                   "image":{
 
-  //                     "imageUri": "https://www.ufabc.edu.br/images/imagens_a_ufabc/campus-sbc.jpg",
-  //                     "accessibilityText": "Campus em São Bernardo do Campo"
+//                       "imageUri": "https://www.ufabc.edu.br/images/imagens_a_ufabc/campus-sbc.jpg",
+//                       "accessibilityText": "Campus em São Bernardo do Campo"
 
-  //                 }
-  //               },
-  //               {
-  //                 "text" :{
-  //                    "text": [
-  //                       "Nossos campi são os melhores do Brasil"
-  //                   ]
-  //                 }
-  //               },
-  //               {
-  //                 "text" :{
-  //                    "text": [
-  //                       "Voce quer participar do processo seletivo?"
-  //                   ]
-  //                 }
-  //               }
-  //             ]
-  //      });
+//                   }
+//                 },
+//                 {
+//                   "text" :{
+//                      "text": [
+//                         "Nossos campi são os melhores do Brasil"
+//                     ]
+//                   }
+//                 },
+//                 {
+//                   "text" :{
+//                      "text": [
+//                         "Voce quer participar do processo seletivo?"
+//                     ]
+//                   }
+//                 }
+//               ]
+//        });
 
 });
 
