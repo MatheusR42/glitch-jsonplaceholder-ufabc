@@ -20,12 +20,16 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
 });
 
+function filterTasksByState(todos, status) {
+  return todos.filter(({completed}) => completed === (status === "done"));
+}
+
 function mapTodoToText(todos) {
   return todos.map(({id, userId, title, completed}) => {
     return {
       text: {
         text: [
-          ``
+          `${userId} - ${title} - ${(completed ? 'done' : 'todo')}`
         ],
       },
     };
@@ -48,7 +52,9 @@ app.post("/webhook", function (request, response) {
     .get(basePath + path)
     .then(function ({ data }) {
       // handle success
-      response.json({ fulfillmentText: "tasksss" });
+      let tasks = !status ? data : filterTasksByState(data, status);
+      
+      response.json({ fulfillmentMessages: mapTodoToText(tasks) });
       console.log(data);
     })
     .catch(function (error) {
