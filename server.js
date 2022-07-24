@@ -22,7 +22,9 @@ app.get("/", (request, response) => {
 app.post("/webhook", function (request, response) {
   var intentName = request.body.queryResult.intent.displayName;
   var parameters = request.body.queryResult.parameters;
-  response.json({"fulfillmentText" : "test"});
+  console.log(intentName)
+  console.log(parameters)
+  response.json({"fulfillmentText" : "Aloooo!"});
   return;
 
   
