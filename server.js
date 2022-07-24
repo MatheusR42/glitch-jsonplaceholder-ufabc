@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const axios = require('axios');
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.json()); // to support JSON-encoded bodies
@@ -25,6 +26,20 @@ app.post("/webhook", function (request, response) {
   console.log(intentName)
   console.log(parameters)
   response.json({"fulfillmentText" : "Aloooo!"});
+  
+  // Make a request for a user with a given ID
+  axios.get('/user?ID=12345')
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    });
   return;
 
   
